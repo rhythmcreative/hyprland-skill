@@ -13,6 +13,16 @@
 [![Rust--Dock](https://img.shields.io/badge/Rust--Dock-f7768e?style=for-the-badge "Rust-Dock")](https://github.com/rhythmcreative/rust-dock)
 [![Hyprlock](https://img.shields.io/badge/Hyprlock-89dceb?style=for-the-badge "Hyprlock")](https://github.com/hyprwm/hyprlock)
 [![Pywal](https://img.shields.io/badge/Pywal-cba6f7?style=for-the-badge "Pywal16")](https://github.com/dylanaraps/pywal)
+
+<br/>
+
+[![Google Antigravity](https://img.shields.io/badge/Google_Antigravity-4285F4?style=for-the-badge&logo=google&logoColor=white "Google Antigravity")](https://github.com/google)
+[![Claude Code](https://img.shields.io/badge/Claude_Code-D97706?style=for-the-badge&logo=anthropic&logoColor=white "Claude Code")](https://claude.ai/code)
+[![OpenCode](https://img.shields.io/badge/OpenCode-10A37F?style=for-the-badge&logo=openai&logoColor=white "OpenCode")](https://opencode.ai)
+[![Codex CLI](https://img.shields.io/badge/Codex_CLI-000000?style=for-the-badge&logo=github&logoColor=white "Codex CLI")](https://openai.com/)
+
+<br/>
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge "MIT License")](LICENSE)
 [![Ko-fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white "Support on Ko-fi")](https://ko-fi.com/rhythmcreative)
 
