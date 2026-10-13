@@ -165,6 +165,6 @@ This repository includes standalone helper scripts under `scripts/`:
 ---
 
 <div align="center">
-  <p>Maintained by <b><a href="https://github.com/rhythmcreative">Rhythm Creative</a></b>.</p>
+  <p>Made with ❤️ by <b><a href="https://github.com/rhythmcreative">rhythmcreative</a></b></p>
   <p>Licensed under the <a href="LICENSE">MIT License</a>.</p>
 </div>
