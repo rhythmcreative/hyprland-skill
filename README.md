@@ -23,7 +23,7 @@
 Run directly in terminal with curl:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/rhythmcreative/hyprland-skill/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/rhythmcreative/hyprland-skill/main/install.sh | sudo bash
 ```
 
 ### Manual install
