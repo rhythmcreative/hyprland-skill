@@ -1,121 +1,181 @@
-# 🚀 Hyprland Desktop Ecosystem Skill (`hyprland-skill`)
+<h1 align="center">rhythm's hyprland-skill</h1>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Hyprland 0.56](https://img.shields.io/badge/Hyprland-0.56%20Lua-blueviolet)](https://hyprland.org/)
-[![Quickshell](https://img.shields.io/badge/Quickshell-Desktop%20Suite-00b4d8)](https://git.outfoxxed.me/outfoxxed/quickshell)
-[![Platform: Wayland](https://img.shields.io/badge/Platform-Wayland%20Linux-orange)]()
+<div align="center">
+  <p><i>Autonomous AI Developer & Pair-Programming Skill for the rhythmcreative/hyprland Desktop Ecosystem.</i></p>
+</div>
 
-An expert AI coding agent skill and developer manual for the **[rhythmcreative/hyprland](https://github.com/rhythmcreative/hyprland)** desktop environment. Structured after the **Omarchy** agent architecture, this repository provides domain-specific knowledge, modular guides, validation suites, and automation tools for AI pair programmers and human developers.
+<div align="center">
 
----
+[![Arch Linux](https://img.shields.io/badge/Arch_Linux-1793d1?style=for-the-badge&logo=archlinux&logoColor=white "Arch Linux")](https://archlinux.org/)
+[![NixOS](https://img.shields.io/badge/NixOS-5277C3?style=for-the-badge&logo=nixos&logoColor=white "NixOS")](https://nixos.org/)
+[![Hyprland](https://img.shields.io/badge/Hyprland-abd6fd?style=for-the-badge&logo=hyprland&logoColor=black "Hyprland 0.56 Lua")](https://hyprland.org/)
+[![Quickshell](https://img.shields.io/badge/Quickshell-7aa2f7?style=for-the-badge "Quickshell Dynamic Island")](https://github.com/outfoxxed/quickshell)
+[![Antigravity](https://img.shields.io/badge/Google_Antigravity-4285F4?style=for-the-badge&logo=google&logoColor=white "Antigravity Agent")](https://deepmind.google/)
+[![Claude Code](https://img.shields.io/badge/Claude_Code-D97706?style=for-the-badge&logo=anthropic&logoColor=white "Claude Code")](https://anthropic.com/)
+[![Rust--Dock](https://img.shields.io/badge/Rust--Dock-f7768e?style=for-the-badge "Rust-Dock")](https://github.com/rhythmcreative/rust-dock)
+[![Hyprlock](https://img.shields.io/badge/Hyprlock-89dceb?style=for-the-badge "Hyprlock")](https://github.com/hyprwm/hyprlock)
+[![Pywal](https://img.shields.io/badge/Pywal-cba6f7?style=for-the-badge "Pywal16")](https://github.com/dylanaraps/pywal)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge "MIT License")](LICENSE)
+[![Ko-fi](https://img.shields.io/badge/Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white "Support on Ko-fi")](https://ko-fi.com/rhythmcreative)
 
-## 📖 What is this Skill?
-
-When an AI coding assistant (such as **Google Antigravity**, **Claude Code**, **OpenCode**, or **Codex**) joins the project, this skill provides instant context on:
-
-* **Hyprland 0.56 (Lua Engine)**: Native Lua scripting (`hl.config`, `hl.bind`), dispatchers (`hl.dispatch(hl.dsp...)`), and multi-monitor topologies.
-* **Quickshell Desktop Suite**: Declarative status bar (`BarraWaybar.qml`) and interactive Dynamic Island (`shell.qml`) with IPC control.
-* **Power & Idle Management**: Single & dual battery detection, charging thresholds (`battery-charge-limit`), and timeout staging in `hypridle` and `hyprlock`.
-* **Pywal Theming**: Live dynamic color synchronization across GTK, Rofi, Quickshell, SDDM, and terminal palettes.
-* **Workflow Automation**: Automated visual regression testing via `grim` and strict English git commit protocols on `main`.
-
----
-
-## 📦 Installation & Setup
-
-### 1. For Antigravity / Gemini CLI Agents
-Clone or symlink this repository into your user customization directory:
-
-```bash
-# Workspace level
-mkdir -p ~/hyprland/.agents/skills
-ln -s ~/hyprland-skill ~/hyprland/.agents/skills/hyprland-skill
-
-# Or machine-wide global level
-mkdir -p ~/.gemini/config/skills
-ln -s ~/hyprland-skill ~/.gemini/config/skills/hyprland-skill
-```
-
-### 2. For Claude Code, OpenCode & Codex Agents
-```bash
-# Claude Code
-mkdir -p ~/.claude/skills
-ln -s ~/hyprland-skill ~/.claude/skills/hyprland-skill
-
-# Standard .agents path
-mkdir -p ~/.agents/skills
-ln -s ~/hyprland-skill ~/.agents/skills/hyprland-skill
-```
-
-### 3. Via Agent Skills Package Manager
-```bash
-npx skills add rhythmcreative/hyprland-skill
-```
+</div>
 
 ---
 
-## 📂 Repository Structure
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=FFFFFF&vCenter=true&multiline=true&width=435&height=35&lines=Quick+installation)](https://git.io/typing-svg)
 
-```text
-hyprland-skill/
-├── SKILL.md                          # Primary agent entrypoint and YAML contract
-├── README.md                         # Project documentation and quickstart
-├── package.json                      # NPM / skills package metadata
-├── LICENSE                           # MIT License
-│
-├── agents/skills/                    # Modular domain guides
-│   ├── shell-dev.md                  # Quickshell architecture (BarraWaybar & shell.qml)
-│   ├── hyprland-lua.md               # Hyprland 0.56 Lua dispatchers & keybindings
-│   ├── idle-and-power.md             # hypridle, hyprlock, DPMS & battery charge limits
-│   ├── visual-verification.md        # Headless grim screenshot verification protocols
-│   ├── git-workflow.md               # Git standards: 'main' branch & English commits
-│   ├── system-scripts.md             # Standards for ~/.local/bin helpers & JSON output
-│   ├── nixos-and-flakes.md           # Declarative NixOS Flake & Home Manager architecture
-│   ├── arch-installer-and-ota.md     # Arch installer (install.sh), migrations & Btrfs OTA updates
-│   ├── sddm-and-theming.md           # SDDM Astronaut theme & Pywal16 dynamic wallpaper color sync
-│   └── rust-dock.md                  # Native Wayland Rust dock & dynamic Rofi menus
-│
-└── scripts/                          # Executable developer & agent automation
-    ├── sync-status                   # Compare & synchronize repo vs active system paths
-    ├── reload-desktop                # Live reload Quickshell, Hyprland, and Hypridle
-    ├── capture-ui                    # Targeted screenshots of bar or dynamic island
-    └── test-battery                  # Diagnostic report for sysfs power supplies
+### ⚡ One-Line Automatic Install
+
+Run directly in your terminal to automatically detect and link the skill into **Antigravity**, **Claude Code**, **OpenCode**, and **Codex**:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/rhythmcreative/hyprland-skill/main/install.sh | bash
+```
+
+### 📦 Alternative Methods
+
+<table>
+  <tr>
+    <td width="50%">
+      <h4 align="center">Via Agent Package Manager</h4>
+      <pre><code>npx skills add rhythmcreative/hyprland-skill</code></pre>
+      <p align="center"><i>Installs automatically via standard skills npm registry.</i></p>
+    </td>
+    <td width="50%">
+      <h4 align="center">Manual Git Clone</h4>
+      <pre><code>git clone https://github.com/rhythmcreative/hyprland-skill.git ~/.local/share/hyprland-skill
+~/.local/share/hyprland-skill/install.sh</code></pre>
+      <p align="center"><i>Clones locally and runs setup links.</i></p>
+    </td>
+  </tr>
+</table>
+
+---
+
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=FFFFFF&vCenter=true&multiline=true&width=435&height=35&lines=Architecture+overview)](https://git.io/typing-svg)
+
+Structured following the **Omarchy** modular agent skill standard, this repository equips AI assistants and human contributors with exhaustive domain knowledge over the entire [rhythmcreative/hyprland](https://github.com/rhythmcreative/hyprland) desktop ecosystem:
+
+```mermaid
+graph TD
+    A["rhythmcreative/hyprland Core Architecture"]
+    
+    A --> L1["1. Compositor Engine<br/>Hyprland 0.56 (Lua)"]
+    A --> L2["2. Desktop Suite<br/>Quickshell Bar & Dynamic Island"]
+    A --> L3["3. Declarative NixOS<br/>Flake & Home Manager"]
+    A --> L4["4. Imperative Arch<br/>install.sh & Btrfs OTA"]
+    A --> L5["5. Theming & Greeter<br/>SDDM Astronaut & Pywal16"]
+    A --> L6["6. Power & Idle<br/>hypridle, hyprlock & battery limits"]
+
+    L1 --> S1["hl.dispatch Lua syntax<br/>Multi-monitor DP-6 & eDP-1"]
+    L2 --> S2["BarraWaybar.qml & shell.qml<br/>CAVA bars, Dual Battery 80% │ 90%, IPC"]
+    L3 --> S3["flake.nix & hosts/asus<br/>modules/nixos & modules/home-manager"]
+    L4 --> S4["install.sh (6000+ lines)<br/>migrations/*.sh, ota-updater"]
+    L5 --> S5["sddm-astronaut-theme<br/>sddm-greeter-monitor, modern-pywal-sync"]
+    L6 --> S6["hypridle (5m lock, 6m off, 30m sleep)<br/>battery-charge-limit 70/80/90/Off"]
 ```
 
 ---
 
-## 🛡️ The 5 Golden Rules for Developers & Agents
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=FFFFFF&vCenter=true&multiline=true&width=435&height=35&lines=Modular+knowledge+guides)](https://git.io/typing-svg)
 
-1. **Branch is strictly `main`**: All changes land directly in `main`. Avoid branching into `dev`.
-2. **Commit Messages in English**: Write clear, active, concise messages (e.g. `adjust multi-battery format and power supply icon in quickshell bar`).
-3. **Dual-Path Sync**: Always synchronize files between the git repo (`~/hyprland/`) and active paths (`~/.config/` & `~/.local/bin/`). Use `./scripts/sync-status --sync`.
-4. **Preserve Unicode Glyphs**: Never corrupt or strip multi-byte Nerd Font icons (`󰂄`, `󰚥`, `󰁹`, `▁▂▃▄▅▆▇█`).
-5. **Verify Visually**: Test with `./scripts/capture-ui bar` before declaring a task complete.
+The skill breaks domain knowledge into specialized, progressive guides located in `agents/skills/`:
+
+<table>
+  <tr>
+    <th>Module Guide</th>
+    <th>Domain Covered in rhythmcreative/hyprland</th>
+  </tr>
+  <tr>
+    <td><a href="agents/skills/shell-dev.md"><b>shell-dev.md</b></a></td>
+    <td><b>Quickshell Suite</b>: Declarative status bar (<code>BarraWaybar.qml</code>), Dynamic Island (<code>shell.qml</code>), tabs & subviews (1 to 7), IPC protocol, and multi-battery presentation (<code>80% │ 90%</code>).</td>
+  </tr>
+  <tr>
+    <td><a href="agents/skills/hyprland-lua.md"><b>hyprland-lua.md</b></a></td>
+    <td><b>Hyprland 0.56 (Lua)</b>: Native Lua configuration (<code>hl.config</code>), dispatchers (<code>hl.dispatch(hl.dsp....)</code>), multi-monitor geometry, and keybindings.</td>
+  </tr>
+  <tr>
+    <td><a href="agents/skills/idle-and-power.md"><b>idle-and-power.md</b></a></td>
+    <td><b>Idle & Power</b>: Safe timeout staging (5m lock, 6m screen off, 30m suspend), <code>hyprlock</code> flags, DPMS resume, and battery charge thresholds (<code>battery-charge-limit</code>).</td>
+  </tr>
+  <tr>
+    <td><a href="agents/skills/nixos-and-flakes.md"><b>nixos-and-flakes.md</b></a></td>
+    <td><b>NixOS & Home Manager</b>: Declarative flake architecture (<code>flake.nix</code>), system modules in <code>modules/nixos/</code>, user modules in <code>modules/home-manager/</code>, and derivations in <code>packages/</code>.</td>
+  </tr>
+  <tr>
+    <td><a href="agents/skills/arch-installer-and-ota.md"><b>arch-installer-and-ota.md</b></a></td>
+    <td><b>Arch Linux & OTA</b>: The 6,000-line <code>install.sh</code> pipeline, state migrations in <code>migrations/</code>, and atomic rollback updates (<code>ota-snapshot</code> & <code>ota-updater</code>).</td>
+  </tr>
+  <tr>
+    <td><a href="agents/skills/sddm-and-theming.md"><b>sddm-and-theming.md</b></a></td>
+    <td><b>SDDM & Theming</b>: Astronaut login theme on Wayland, <code>sddm-greeter-monitor</code> display detection, and <code>modern-pywal-sync</code> real-time palette distribution.</td>
+  </tr>
+  <tr>
+    <td><a href="agents/skills/rust-dock.md"><b>rust-dock.md</b></a></td>
+    <td><b>Rust Dock & Launchers</b>: Native GTK4/Layer-Shell dock written in Rust, pinned desktop entries, and singleton PID-locked Rofi menus.</td>
+  </tr>
+  <tr>
+    <td><a href="agents/skills/git-workflow.md"><b>git-workflow.md</b></a></td>
+    <td><b>Git Standards</b>: Strict <code>main</code> branch policy, imperative English commit messages, and repository-to-system synchronization rules.</td>
+  </tr>
+  <tr>
+    <td><a href="agents/skills/visual-verification.md"><b>visual-verification.md</b></a></td>
+    <td><b>Visual Quality Assurance</b>: Headless Wayland screenshot capture protocols with <code>grim -g</code> to inspect changes before declaring tasks complete.</td>
+  </tr>
+  <tr>
+    <td><a href="agents/skills/system-scripts.md"><b>system-scripts.md</b></a></td>
+    <td><b>Script Architecture</b>: Standards for utilities in <code>~/.local/bin/</code>, environment exports, and strict JSON output contracts.</td>
+  </tr>
+</table>
 
 ---
 
-## ⚡ Quick Commands
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=FFFFFF&vCenter=true&multiline=true&width=435&height=35&lines=Developer+CLI+tools)](https://git.io/typing-svg)
+
+This repository includes standalone helper scripts under `scripts/`:
 
 ```bash
-# Check synchronization between repository and active system files
+# Check synchronization between ~/hyprland and ~/.config / ~/.local/bin
 ./scripts/sync-status
 
-# Synchronize out-of-sync files from repository to system
+# Automatically synchronize modified repo files to the live system
 ./scripts/sync-status --sync
 
-# Reload desktop environment components cleanly
+# Safely reload Hyprland, Quickshell, and Hypridle in live session
 ./scripts/reload-desktop
 
-# Take a screenshot of the top status bar
+# Take a precise screenshot of the status bar for UI inspection
 ./scripts/capture-ui bar /tmp/bar.png
 
-# Diagnose battery sensors and power supply status
+# Take a screenshot of the Dynamic Island
+./scripts/capture-ui island /tmp/island.png
+
+# Diagnose battery sensors, power supplies, and battery-info output
 ./scripts/test-battery
 ```
 
 ---
 
-## 🤝 Contributing & License
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=FFFFFF&vCenter=true&multiline=true&width=435&height=35&lines=The+5+golden+rules)](https://git.io/typing-svg)
 
-Created by **Rhythm Creative**. Licensed under the [MIT License](LICENSE).
-Contributions and extensions to the Hyprland and Quickshell agent ecosystem are welcome!
+> [!IMPORTANT]
+> **1. Target Branch is strictly `main`**: Never commit to `dev`. All changes land directly in `main`.
+
+> [!NOTE]
+> **2. Commit Messages in English**: Write short, direct, imperative commit messages (e.g., `adjust multi-battery format and power supply icon in quickshell bar`). Avoid Conventional Commit prefixes like `feat:` or `fix:`.
+
+> [!TIP]
+> **3. Bidirectional Sync**: Files modified in `~/hyprland/` must be synchronized to their active home paths (`~/.config/` & `~/.local/bin/`) before testing or reloading.
+
+> [!CAUTION]
+> **4. Preserve Unicode Glyphs**: Never strip or corrupt multi-byte Nerd Font symbols (`󰂄`, `󰚥`, `󰁹`, `▁▂▃▄▅▆▇█`). Ensure files remain UTF-8 encoded.
+
+> [!WARNING]
+> **5. Visual Verification**: Always inspect visual modifications using `./scripts/capture-ui` before marking work as done.
+
+---
+
+<div align="center">
+  <p>Crafted with care by <b><a href="https://github.com/rhythmcreative">Rhythm Creative</a></b>.</p>
+  <p>Licensed under the <a href="LICENSE">MIT License</a>.</p>
+</div>
