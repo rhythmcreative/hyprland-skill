@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# test-battery: Diagnoses battery reporting, AC online state, and dual battery detection
+set -euo pipefail
+
+echo "=== Power Supply Devices in /sys/class/power_supply ==="
+for d in /sys/class/power_supply/*; do
+    [ -d "$d" ] || continue
+    name=$(basename "$d")
+    type=$(cat "$d/type" 2>/dev/null || echo "Unknown")
+    scope=$(cat "$d/scope" 2>/dev/null || echo "N/A")
+    online=$(cat "$d/online" 2>/dev/null || echo "N/A")
+    cap=$(cat "$d/capacity" 2>/dev/null || echo "N/A")
+    status=$(cat "$d/status" 2>/dev/null || echo "N/A")
+    echo "- [$name] Type: $type | Scope: $scope | Online: $online | Cap: $cap% | Status: $status"
+done
+
+echo ""
+echo "=== Output from battery-info helper ==="
+if [ -x "$HOME/.local/bin/battery-info" ]; then
+    "$HOME/.local/bin/battery-info" | jq . 2>/dev/null || "$HOME/.local/bin/battery-info"
+else
+    echo "battery-info not found in ~/.local/bin"
+fi

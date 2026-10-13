@@ -1,0 +1,26 @@
+{
+  "name": "@rhythmcreative/hyprland-skill",
+  "version": "1.0.0",
+  "description": "Comprehensive AI agent skill and developer manual for the rhythmcreative/hyprland desktop environment, styled after Omarchy.",
+  "main": "SKILL.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhythmcreative/hyprland-skill.git"
+  },
+  "keywords": [
+    "hyprland",
+    "quickshell",
+    "agent-skill",
+    "omarchy",
+    "antigravity",
+    "claude-code",
+    "wayland",
+    "dotfiles"
+  ],
+  "author": "Rhythm Creative <https://github.com/rhythmcreative>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rhythmcreative/hyprland-skill/issues"
+  },
+  "homepage": "https://github.com/rhythmcreative/hyprland-skill#readme"
+}
