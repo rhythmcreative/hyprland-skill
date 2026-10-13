@@ -4,7 +4,7 @@ This guide covers the standards and patterns for creating and maintaining helper
 
 ---
 
-## 🛠️ Script Conventions
+## Script Conventions
 
 ### 1. Shebang & Robust Shell Options
 All Bash utilities must begin with strict mode:
@@ -38,7 +38,7 @@ Helpers consumed by Quickshell processes (`Process {}` / `StdioCollector`) shoul
 
 ---
 
-## 📋 Catalog of Core Helpers
+## Catalog of Core Helpers
 
 | Script | Purpose |
 | :--- | :--- |

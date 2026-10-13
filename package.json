@@ -1,7 +1,7 @@
 {
   "name": "@rhythmcreative/hyprland-skill",
   "version": "1.0.0",
-  "description": "Comprehensive AI agent skill and developer manual for the rhythmcreative/hyprland desktop environment, styled after Omarchy.",
+  "description": "Developer guides, automation scripts, and workflow specifications for the rhythmcreative/hyprland desktop environment.",
   "main": "SKILL.md",
   "repository": {
     "type": "git",
@@ -10,10 +10,7 @@
   "keywords": [
     "hyprland",
     "quickshell",
-    "agent-skill",
     "omarchy",
-    "antigravity",
-    "claude-code",
     "wayland",
     "dotfiles"
   ],

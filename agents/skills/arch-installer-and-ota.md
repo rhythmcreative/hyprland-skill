@@ -4,7 +4,7 @@ This guide explains the Arch Linux native installation pipeline (`install.sh`), 
 
 ---
 
-## 🚀 The Arch Installer (`install.sh`)
+## The Arch Installer (`install.sh`)
 
 `install.sh` is an automated setup script (over 6,000 lines) responsible for transforming a vanilla Arch Linux installation into the Rhythm desktop environment.
 
@@ -20,7 +20,7 @@ This guide explains the Arch Linux native installation pipeline (`install.sh`), 
 
 ---
 
-## 🔄 System Migrations (`migrations/`)
+## System Migrations (`migrations/`)
 
 When updating an existing installation to a new version, migration scripts in `migrations/` handle state transitions:
 
@@ -30,7 +30,7 @@ When updating an existing installation to a new version, migration scripts in `m
 
 ---
 
-## 📦 OTA Atomic Update System
+## OTA Atomic Update System
 
 The OTA engine allows pushing desktop updates safely with rollback support on Btrfs systems:
 

@@ -4,7 +4,7 @@ This guide details configuring and scripting **Hyprland 0.56** using its modern 
 
 ---
 
-## 📜 Lua Engine Basics
+## Lua Engine Basics
 
 Hyprland 0.56 introduces native Lua configuration via the global table `hl`:
 
@@ -35,11 +35,11 @@ hl.config({
 
 ---
 
-## ⚠️ The Hyprland 0.56 Dispatcher Trap
+## The Hyprland 0.56 Dispatcher Trap
 
 In Hyprland 0.56, running standard Hyprland legacy commands via CLI like:
 ```bash
-hyprctl dispatch dpms on   # ❌ FAILS with: "')' expected near 'on'"
+hyprctl dispatch dpms on   # [FAIL] FAILS with: "')' expected near 'on'"
 ```
 will fail because `hyprctl` wraps CLI arguments inside `hl.dispatch(...)`, expecting valid Lua expressions.
 
@@ -61,7 +61,7 @@ hyprctl dispatch "hl.dsp.dpms('on')"
 
 ---
 
-## 🖥️ Multi-Monitor Handling
+## Multi-Monitor Handling
 
 Query connected monitors dynamically using JSON output:
 
@@ -75,7 +75,7 @@ focused_mon=$(hyprctl monitors -j | jq -r '.[] | select(.focused == true) | .nam
 
 ---
 
-## 🔄 Reloading Hyprland
+## Reloading Hyprland
 
 To reload configuration changes without restarting the compositor:
 

@@ -4,19 +4,19 @@ This guide establishes the mandatory version control and deployment standards fo
 
 ---
 
-## 🎯 Golden Standards
+## Golden Standards
 
 1. **Target Branch**: Strictly **`main`**. Never push to `dev` unless explicitly requested.
 2. **Commit Language**: Strictly **English**.
 3. **Commit Style**: Short, natural, direct, and imperative. Do **not** use Conventional Commits prefixes (avoid `feat:`, `fix:`, `chore:`).
-   - ✅ `adjust multi-battery format and power supply icon in quickshell bar`
-   - ✅ `fix hyprlock screen disappearance and idle sleep configuration`
-   - ✅ `remove obsolete language subview from dynamic island`
-   - ❌ `fix(battery): arreglar las baterias`
+   - [OK] `adjust multi-battery format and power supply icon in quickshell bar`
+   - [OK] `fix hyprlock screen disappearance and idle sleep configuration`
+   - [OK] `remove obsolete language subview from dynamic island`
+   - [FAIL] `fix(battery): arreglar las baterias`
 
 ---
 
-## 🔄 Directory Mapping & Dual-Path Sync
+## Directory Mapping & Dual-Path Sync
 
 The git working tree resides in `/home/rhythmcreative/hyprland`. The operating system executes configurations from active home directories.
 

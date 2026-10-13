@@ -4,7 +4,7 @@ This guide covers the native Wayland dock written in Rust and the Rofi applicati
 
 ---
 
-## 🦀 Rust Dock (`packages/rust-dock/`)
+## Rust Dock (`packages/rust-dock/`)
 
 The repository includes a custom, lightweight Wayland application dock written in **Rust**:
 
@@ -15,7 +15,7 @@ The repository includes a custom, lightweight Wayland application dock written i
 
 ---
 
-## 🔍 Application Menus & Launchers
+## Application Menus & Launchers
 
 ### 1. `rofi-themed` (`~/.local/bin/rofi-themed`)
 - Launches Rofi with the dynamic Pywal theme.

@@ -1,7 +1,7 @@
 <h1 align="center">rhythm's hyprland-skill</h1>
 
 <div align="center">
-  <p><i>Autonomous AI Developer & Pair-Programming Skill for the rhythmcreative/hyprland Desktop Ecosystem.</i></p>
+  <p><i>Developer guides, automation scripts, and workflow specifications for rhythmcreative/hyprland</i></p>
 </div>
 
 <div align="center">
@@ -10,8 +10,6 @@
 [![NixOS](https://img.shields.io/badge/NixOS-5277C3?style=for-the-badge&logo=nixos&logoColor=white "NixOS")](https://nixos.org/)
 [![Hyprland](https://img.shields.io/badge/Hyprland-abd6fd?style=for-the-badge&logo=hyprland&logoColor=black "Hyprland 0.56 Lua")](https://hyprland.org/)
 [![Quickshell](https://img.shields.io/badge/Quickshell-7aa2f7?style=for-the-badge "Quickshell Dynamic Island")](https://github.com/outfoxxed/quickshell)
-[![Antigravity](https://img.shields.io/badge/Google_Antigravity-4285F4?style=for-the-badge&logo=google&logoColor=white "Antigravity Agent")](https://deepmind.google/)
-[![Claude Code](https://img.shields.io/badge/Claude_Code-D97706?style=for-the-badge&logo=anthropic&logoColor=white "Claude Code")](https://anthropic.com/)
 [![Rust--Dock](https://img.shields.io/badge/Rust--Dock-f7768e?style=for-the-badge "Rust-Dock")](https://github.com/rhythmcreative/rust-dock)
 [![Hyprlock](https://img.shields.io/badge/Hyprlock-89dceb?style=for-the-badge "Hyprlock")](https://github.com/hyprwm/hyprlock)
 [![Pywal](https://img.shields.io/badge/Pywal-cba6f7?style=for-the-badge "Pywal16")](https://github.com/dylanaraps/pywal)
@@ -24,37 +22,28 @@
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=FFFFFF&vCenter=true&multiline=true&width=435&height=35&lines=Quick+installation)](https://git.io/typing-svg)
 
-### ⚡ One-Line Automatic Install
+### Quick install
 
-Run directly in your terminal to automatically detect and link the skill into **Antigravity**, **Claude Code**, **OpenCode**, and **Codex**:
+Run directly in terminal with curl:
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/rhythmcreative/hyprland-skill/main/install.sh | bash
 ```
 
-### 📦 Alternative Methods
+### Manual install
 
-<table>
-  <tr>
-    <td width="50%">
-      <h4 align="center">Via Agent Package Manager</h4>
-      <pre><code>npx skills add rhythmcreative/hyprland-skill</code></pre>
-      <p align="center"><i>Installs automatically via standard skills npm registry.</i></p>
-    </td>
-    <td width="50%">
-      <h4 align="center">Manual Git Clone</h4>
-      <pre><code>git clone https://github.com/rhythmcreative/hyprland-skill.git ~/.local/share/hyprland-skill
-~/.local/share/hyprland-skill/install.sh</code></pre>
-      <p align="center"><i>Clones locally and runs setup links.</i></p>
-    </td>
-  </tr>
-</table>
+Clone the repository and run the setup script:
+
+```bash
+git clone https://github.com/rhythmcreative/hyprland-skill.git ~/.local/share/hyprland-skill
+~/.local/share/hyprland-skill/install.sh
+```
 
 ---
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=FFFFFF&vCenter=true&multiline=true&width=435&height=35&lines=Architecture+overview)](https://git.io/typing-svg)
 
-Structured following the **Omarchy** modular agent skill standard, this repository equips AI assistants and human contributors with exhaustive domain knowledge over the entire [rhythmcreative/hyprland](https://github.com/rhythmcreative/hyprland) desktop ecosystem:
+Structured following modular skill and runbook standards, this repository provides architecture documentation, runbooks, and automation tools for the [rhythmcreative/hyprland](https://github.com/rhythmcreative/hyprland) desktop ecosystem:
 
 ```mermaid
 graph TD
@@ -79,7 +68,7 @@ graph TD
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=FFFFFF&vCenter=true&multiline=true&width=435&height=35&lines=Modular+knowledge+guides)](https://git.io/typing-svg)
 
-The skill breaks domain knowledge into specialized, progressive guides located in `agents/skills/`:
+Technical documentation is divided into modular reference guides located in `agents/skills/`:
 
 <table>
   <tr>
@@ -168,7 +157,7 @@ This repository includes standalone helper scripts under `scripts/`:
 > **3. Bidirectional Sync**: Files modified in `~/hyprland/` must be synchronized to their active home paths (`~/.config/` & `~/.local/bin/`) before testing or reloading.
 
 > [!CAUTION]
-> **4. Preserve Unicode Glyphs**: Never strip or corrupt multi-byte Nerd Font symbols (`󰂄`, `󰚥`, `󰁹`, `▁▂▃▄▅▆▇█`). Ensure files remain UTF-8 encoded.
+> **4. Preserve Unicode Glyphs**: Never strip or corrupt multi-byte Nerd Font symbols (``, ``, ``, `▁▂▃▄▅▆▇█`). Ensure files remain UTF-8 encoded.
 
 > [!WARNING]
 > **5. Visual Verification**: Always inspect visual modifications using `./scripts/capture-ui` before marking work as done.
@@ -176,6 +165,6 @@ This repository includes standalone helper scripts under `scripts/`:
 ---
 
 <div align="center">
-  <p>Crafted with care by <b><a href="https://github.com/rhythmcreative">Rhythm Creative</a></b>.</p>
+  <p>Maintained by <b><a href="https://github.com/rhythmcreative">Rhythm Creative</a></b>.</p>
   <p>Licensed under the <a href="LICENSE">MIT License</a>.</p>
 </div>

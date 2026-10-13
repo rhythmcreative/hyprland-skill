@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # ==============================================================================
 # hyprland-skill installer
-# Automated setup for Antigravity, Claude Code, OpenCode, and Codex agents
+# Automated setup and symlink configuration
 # ==============================================================================
 set -euo pipefail
 
@@ -9,25 +9,11 @@ SKILL_REPO_URL="https://github.com/rhythmcreative/hyprland-skill.git"
 INSTALL_DIR="${HOME}/.local/share/hyprland-skill"
 ALT_INSTALL_DIR="${HOME}/hyprland-skill"
 
-# Visual formatting
 BOLD="\033[1m"
 GREEN="\033[32m"
 BLUE="\033[34m"
 CYAN="\033[36m"
-YELLOW="\033[33m"
 RESET="\033[0m"
-
-echo -e "${CYAN}${BOLD}"
-cat << "EOF"
-  _                              _                 _           _     _ _ _ 
- | |__  _   _ _ __  _ __| | __ _ _ __   __| |      ___| | _ (_) | |
- | '_ \| | | | '_ \| '__| |/ _` | '_ \ / _` |_____/ __| |/ / | | |
- | | | | |_| | |_) | |  | | (_| | | | | (_| |_____\__ \   <| | | |
- |_| |_|\__, | .__/|_|  |_|\__,_|_| |_|\__,_|     |___/_|\_\_|_|_|
-        |___/|_|                                                   
-       Autonomous AI Developer Skill for Hyprland & Quickshell
-EOF
-echo -e "${RESET}"
 
 echo -e "${BLUE}==>${RESET} ${BOLD}Installing or updating hyprland-skill...${RESET}"
 
@@ -45,27 +31,23 @@ else
 fi
 
 # 2. Make helper scripts executable
-echo -e "${BLUE}==>${RESET} ${BOLD}Ensuring executable permissions on helper scripts...${RESET}"
+echo -e "${BLUE}==>${RESET} ${BOLD}Setting executable permissions on helper scripts...${RESET}"
 chmod +x "$INSTALL_DIR"/scripts/* 2>/dev/null || true
 
-# 3. Detect and link into agent harnesses
-echo -e "${BLUE}==>${RESET} ${BOLD}Configuring agent discovery symlinks...${RESET}"
+# 3. Configure discovery symlinks
+echo -e "${BLUE}==>${RESET} ${BOLD}Configuring skill discovery paths...${RESET}"
 
 link_skill() {
     local target_dir="$1"
     local name="$2"
     mkdir -p "$target_dir"
     ln -sfn "$INSTALL_DIR" "$target_dir/$name"
-    echo -e "  ${GREEN}✓${RESET} Linked for ${BOLD}$name${RESET} in ${target_dir}"
+    echo -e "  ${GREEN}[OK]${RESET} Linked ${BOLD}$name${RESET} -> ${target_dir}"
 }
 
-# Antigravity / Gemini CLI (Global)
+# Global configurations
 link_skill "${HOME}/.gemini/config/skills" "hyprland-skill"
-
-# Standard agent harnesses (~/.agents/skills)
 link_skill "${HOME}/.agents/skills" "hyprland-skill"
-
-# Claude Code
 link_skill "${HOME}/.claude/skills" "hyprland-skill"
 
 # Workspace level if rhythmcreative/hyprland exists
@@ -74,10 +56,9 @@ if [ -d "${HOME}/hyprland" ]; then
 fi
 
 echo ""
-echo -e "${GREEN}${BOLD}✓ Installation completed successfully!${RESET}"
-echo -e "Agents will now automatically load ${CYAN}hyprland-skill${RESET} when working on your desktop."
+echo -e "${GREEN}${BOLD}Installation completed successfully.${RESET}"
 echo ""
-echo -e "Available helper commands:"
+echo -e "Available tools:"
 echo -e "  ${BOLD}${INSTALL_DIR}/scripts/sync-status${RESET}      - Verify file sync between repo and system"
 echo -e "  ${BOLD}${INSTALL_DIR}/scripts/reload-desktop${RESET}    - Safely reload Hyprland, Quickshell, and Hypridle"
 echo -e "  ${BOLD}${INSTALL_DIR}/scripts/capture-ui bar${RESET}    - Verify UI layout with instant grim capture"

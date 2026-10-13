@@ -4,7 +4,7 @@ This guide covers the declarative NixOS and Home Manager implementation of the *
 
 ---
 
-## ❄️ Flake Architecture (`flake.nix`)
+## Flake Architecture (`flake.nix`)
 
 The repository provides a dual deployment model:
 1. An imperative installer for vanilla Arch Linux (`install.sh`).
@@ -32,7 +32,7 @@ hyprland/
 
 ---
 
-## 📦 Core Nix Modules
+## Core Nix Modules
 
 ### 1. `modules/nixos/`
 - **`hyprland.nix`**: Enables Hyprland compositor with UWSM/systemd integration and required Wayland portals (`xdg-desktop-portal-hyprland`).
@@ -47,7 +47,7 @@ hyprland/
 
 ---
 
-## 🛠️ Testing & Building on NixOS
+## Testing & Building on NixOS
 
 ```bash
 # Validate flake evaluation without applying

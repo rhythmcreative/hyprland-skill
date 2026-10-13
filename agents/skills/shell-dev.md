@@ -4,7 +4,7 @@ This guide covers editing and extending the desktop shell implemented in **Quick
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 The Quickshell suite consists of two primary QML components loaded simultaneously:
 
@@ -36,7 +36,7 @@ The Quickshell suite consists of two primary QML components loaded simultaneousl
 
 ---
 
-## ⚡ IPC Gateway
+## IPC Gateway
 
 Quickshell exposes an IPC interface using `quickshell ipc`. Never manipulate internal sockets directly; use the IPC helper commands:
 
@@ -57,7 +57,7 @@ quickshell ipc -p $HOME/.config/quickshell/waybar-island/shell.qml --any-display
 
 ---
 
-## 🔋 Battery Formatting Standards
+## Battery Formatting Standards
 
 ### Top Bar Widget (`BarraWaybar.qml`)
 
@@ -83,7 +83,7 @@ if (!barWin.hasBattery || batCount === 0 || bStatus === "AC") {
 
 ---
 
-## 🔄 Live Reloading Procedure
+## Live Reloading Procedure
 
 Whenever you update `BarraWaybar.qml` or `shell.qml`:
 

@@ -4,7 +4,7 @@ This guide outlines protocols for verifying graphical UI components in Wayland w
 
 ---
 
-## 📸 Capturing Screenshots with `grim`
+## Capturing Screenshots with `grim`
 
 In Hyprland/Wayland, `grim` captures framebuffers directly from the compositor.
 
@@ -32,7 +32,7 @@ grim -g "2560,0 1920x1080" /tmp/test_edp.png
 
 ---
 
-## 🔍 Visual Quality Checklist
+## Visual Quality Checklist
 
 When reviewing screenshots of modified components, verify:
 

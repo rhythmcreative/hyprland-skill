@@ -4,7 +4,7 @@ This guide outlines the timeout staging, screen lock mechanisms, and battery man
 
 ---
 
-## ⏱️ Idle & Timeout Lifecycle (`hypridle.conf`)
+## Idle & Timeout Lifecycle (`hypridle.conf`)
 
 The idle daemon (`hypridle`) coordinates screen dimming, locking, display sleep, and system suspension.
 
@@ -43,7 +43,7 @@ listener {
 
 ---
 
-## 🔒 Lock Screen Configuration (`hyprlock.conf`)
+## Lock Screen Configuration (`hyprlock.conf`)
 
 `hyprlock` provides a Wayland-native lock screen.
 
@@ -54,7 +54,7 @@ listener {
 
 ---
 
-## 🔋 Battery Information & Thresholds
+## Battery Information & Thresholds
 
 Power state is extracted via `/sys/class/power_supply/`:
 
@@ -70,7 +70,7 @@ Outputs unified JSON detailing AC state and an array of internal batteries:
     "health": 67,
     "voltage": 16.06,
     "threshold": 80,
-    "icon": "󰂄"
+    "icon": ""
   }],
   "ac": { "present": true, "online": true },
   "is_charging": false,

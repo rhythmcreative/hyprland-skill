@@ -4,7 +4,7 @@ This guide covers the SDDM display manager integration, multi-monitor greeter se
 
 ---
 
-## 🚀 SDDM Astronaut Theme (`sddm/`)
+## SDDM Astronaut Theme (`sddm/`)
 
 The display manager uses a customized version of the **SDDM Astronaut Theme**:
 
@@ -16,7 +16,7 @@ The display manager uses a customized version of the **SDDM Astronaut Theme**:
 
 ---
 
-## 🎨 Pywal16 Dynamic Color Engine
+## Pywal16 Dynamic Color Engine
 
 When a wallpaper changes via `setwall.sh` or `wallpaper-selector`:
 

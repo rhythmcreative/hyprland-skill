@@ -1,22 +1,23 @@
 ---
 name: hyprland-skill
 description: >-
-  Comprehensive AI developer and pair-programming skill for the rhythmcreative/hyprland
-  desktop environment. Use when creating, modifying, debugging, or maintaining components
-  in Hyprland 0.56 (Lua), Quickshell (BarraWaybar and Dynamic Island shell.qml),
-  power and idle management (hypridle, hyprlock, screen-power), system scripts in
-  ~/.local/bin, or orchestrating git workflows and live desktop reloads.
+  Developer guides, automation scripts, and workflow specifications for the
+  rhythmcreative/hyprland desktop environment. Use when creating, modifying,
+  debugging, or maintaining components in Hyprland 0.56 (Lua), Quickshell (BarraWaybar
+  and Dynamic Island shell.qml), power and idle management (hypridle, hyprlock,
+  screen-power), system scripts in ~/.local/bin, or orchestrating git workflows
+  and live desktop reloads.
 ---
 
-# Hyprland Desktop Ecosystem Skill (`hyprland-skill`)
+# Hyprland Desktop Ecosystem Developer Manual (`hyprland-skill`)
 
-This skill equips AI coding agents with deep domain expertise over the **rhythmcreative/hyprland** desktop environment—a modern, keyboard-centric Wayland setup based on **Hyprland 0.56 (Lua)** and a full **Quickshell** application suite (Waybar status bar replica and Dynamic Island control center).
+This repository provides technical documentation and workflow automation for the **rhythmcreative/hyprland** desktop environment—a keyboard-centric Wayland setup based on **Hyprland 0.56 (Lua)** and a full **Quickshell** application suite (Waybar status bar replica and Dynamic Island control center).
 
 Structured in the style of **Omarchy**, this repository provides modular procedures, architectural contracts, runnable developer scripts, and strict quality gates for rapid development.
 
 ---
 
-## 🏛️ Core Architecture Overview
+## Core Architecture Overview
 
 The desktop environment is divided into four distinct layers:
 
@@ -54,22 +55,22 @@ graph TD
 
 ---
 
-## 🛡️ The 5 Golden Rules for Agents
+## Engineering Rules and Standards
 
-Agents working in this codebase **must** adhere strictly to the following five rules:
+When contributing or modifying code in this codebase, adhere strictly to the following standards:
 
 ### 1. Git Branch is strictly `main`
-- Never commit or push to `dev` unless explicitly instructed by the user.
+- Never commit or push to `dev` unless explicitly instructed.
 - All stable work goes directly to `origin/main`.
 
 ### 2. Commit Messages in English (Natural & Concise)
-- Commit messages must be written in **plain English**.
-- Do **not** use Conventional Commits prefixes (avoid `feat:`, `fix:`, `refactor:`).
+- Commit messages must be written in plain English.
+- Do not use Conventional Commits prefixes (avoid `feat:`, `fix:`, `refactor:`).
 - Keep messages short, active, and specific.
-- *Examples*:
-  - ✅ `adjust multi-battery format and power supply icon in quickshell bar`
-  - ✅ `fix hyprlock screen disappearance and idle sleep configuration`
-  - ❌ `fix: arreglar las baterias`
+- Examples:
+  - Correct: `adjust multi-battery format and power supply icon in quickshell bar`
+  - Correct: `fix hyprlock screen disappearance and idle sleep configuration`
+  - Incorrect: `fix: arreglar las baterias`
 
 ### 3. Bidirectional Synchronization
 The user maintains the git repository in `~/hyprland/`, but the live system runs from `~/.config/` and `~/.local/bin/`.
@@ -87,7 +88,7 @@ The user maintains the git repository in `~/hyprland/`, but the live system runs
 - Before committing, verify that both directories match.
 
 ### 4. Preservation of Unicode & Nerd Font Glyphs
-- The UI relies heavily on Nerd Font v3 symbols (e.g., `󰂄` charging, `󰚥` AC plug, `󰁹` full battery, `󰔏` temp, `󰈀` ethernet).
+- The UI relies heavily on Nerd Font v3 symbols (e.g., `` charging, `` AC plug, `` full battery, `` temp, `` ethernet).
 - When editing QML or Bash files, **never** replace or corrupt multi-byte UTF-8 glyphs. Keep file encodings in strict UTF-8 (`LC_ALL=C.UTF-8`).
 
 ### 5. Visual Verification Before Declaring Done
@@ -99,7 +100,7 @@ The user maintains the git repository in `~/hyprland/`, but the live system runs
 
 ---
 
-## 📚 Modular Guides (`agents/skills/`)
+## Modular Guides (`agents/skills/`)
 
 For detailed procedures, consult the specialized topic guides:
 
@@ -118,7 +119,7 @@ For detailed procedures, consult the specialized topic guides:
 
 ---
 
-## ⚡ Quick Developer CLI Tools (`scripts/`)
+## Developer CLI Tools (`scripts/`)
 
 This skill includes standalone helper scripts located in `./scripts/`:
 
