@@ -69,7 +69,11 @@ hyprland-skill/
 │   ├── idle-and-power.md             # hypridle, hyprlock, DPMS & battery charge limits
 │   ├── visual-verification.md        # Headless grim screenshot verification protocols
 │   ├── git-workflow.md               # Git standards: 'main' branch & English commits
-│   └── system-scripts.md             # Standards for ~/.local/bin helpers & JSON output
+│   ├── system-scripts.md             # Standards for ~/.local/bin helpers & JSON output
+│   ├── nixos-and-flakes.md           # Declarative NixOS Flake & Home Manager architecture
+│   ├── arch-installer-and-ota.md     # Arch installer (install.sh), migrations & Btrfs OTA updates
+│   ├── sddm-and-theming.md           # SDDM Astronaut theme & Pywal16 dynamic wallpaper color sync
+│   └── rust-dock.md                  # Native Wayland Rust dock & dynamic Rofi menus
 │
 └── scripts/                          # Executable developer & agent automation
     ├── sync-status                   # Compare & synchronize repo vs active system paths

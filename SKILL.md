@@ -111,6 +111,10 @@ For detailed procedures, consult the specialized topic guides:
 | [**visual-verification.md**](./agents/skills/visual-verification.md) | Screen capture protocols with `grim`, layer-shell inspection, troubleshooting black screens. |
 | [**git-workflow.md**](./agents/skills/git-workflow.md) | Repository mapping, atomic commits in English, push verification, pull request workflows. |
 | [**system-scripts.md**](./agents/skills/system-scripts.md) | Helper conventions in `~/.local/bin/`, argument parsing, JSON output contracts, environment safety. |
+| [**nixos-and-flakes.md**](./agents/skills/nixos-and-flakes.md) | Declarative NixOS Flake (`flake.nix`), Home Manager modules, custom derivations in `packages/`. |
+| [**arch-installer-and-ota.md**](./agents/skills/arch-installer-and-ota.md) | Arch setup script (`install.sh`), system migrations (`migrations/`), Btrfs atomic OTA updates. |
+| [**sddm-and-theming.md**](./agents/skills/sddm-and-theming.md) | SDDM Astronaut theme, multi-monitor greeter setup, Pywal16 dynamic wallpaper color sync. |
+| [**rust-dock.md**](./agents/skills/rust-dock.md) | Wayland native Rust dock (`packages/rust-dock/`) and Rofi dynamic application menus. |
 
 ---
 
